@@ -1,0 +1,11 @@
+{
+  "name": "oms-dev",
+  "description": "Claude Code skills for HADV.OMS.Services — scaffolding, code review, debugging, and performance analysis for .NET 8 Clean Architecture.",
+  "version": "1.0.0",
+  "author": {
+    "name": "stratis-jalindar"
+  },
+  "repository": "https://github.com/stratis-jalindar/developer-skills",
+  "license": "MIT",
+  "keywords": ["dotnet", "clean-architecture", "ardalis", "oms", "code-review"]
+}
