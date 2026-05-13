@@ -5,7 +5,7 @@
   "author": {
     "name": "stratis-jalindar"
   },
-  "repository": "https://github.com/stratis-jalindar/developer-skills",
+  "repository": "https://github.com/jalindarht/developer-skills",
   "license": "MIT",
   "keywords": ["dotnet", "clean-architecture", "ardalis", "oms", "code-review"]
 }
