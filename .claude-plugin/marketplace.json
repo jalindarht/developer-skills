@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "oms-dev",
-      "source": ".",
+      "source": "./plugins/oms-dev",
       "description": "Claude Code skills for HADV.OMS.Services — scaffolding, code review, debugging, and performance analysis for .NET 8 Clean Architecture."
     }
   ]
