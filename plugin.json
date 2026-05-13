@@ -1,0 +1,6 @@
+{
+  "name": "oms-dev",
+  "version": "1.0.0",
+  "description": "Claude Code skills for HADV.OMS.Services — scaffolding, code review, debugging, and performance analysis for .NET 8 Clean Architecture.",
+  "skills": ["./skills/"]
+}

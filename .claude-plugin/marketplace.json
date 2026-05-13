@@ -1,0 +1,13 @@
+{
+  "name": "oms-dev-skills",
+  "owner": {
+    "name": "jalindarht"
+  },
+  "plugins": [
+    {
+      "name": "oms-dev",
+      "source": ".",
+      "description": "Claude Code skills for HADV.OMS.Services — scaffolding, code review, debugging, and performance analysis for .NET 8 Clean Architecture."
+    }
+  ]
+}
