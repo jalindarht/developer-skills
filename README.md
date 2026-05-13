@@ -5,7 +5,7 @@ Claude Code skills for **HADV.OMS.Services** — a .NET 8 Clean Architecture bac
 ## Installation
 
 ```
-/plugin install github.com/stratis-jalindar/developer-skills
+/plugin install github.com/jalindarht/developer-skills
 ```
 
 Once installed, all skills are available under the `oms-dev` namespace.
