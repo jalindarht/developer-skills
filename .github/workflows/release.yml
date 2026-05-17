@@ -1,0 +1,47 @@
+name: Release Plugin
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build plugin ZIP
+        run: |
+          mkdir -p dist
+          # Create ZIP with files at root (no wrapper directory)
+          zip -r dist/oms-dev-skills.zip \
+            .claude-plugin/ \
+            plugins/ \
+            LICENSE \
+            README.md \
+            .gitignore
+          echo "ZIP contents:"
+          unzip -l dist/oms-dev-skills.zip
+
+      - name: Delete existing latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete latest --yes 2>/dev/null || true
+          git push origin :refs/tags/latest 2>/dev/null || true
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create latest \
+            --title "Latest" \
+            --notes "Latest build of the oms-dev plugin. Install in Claude Desktop using the ZIP URL below." \
+            --latest \
+            dist/oms-dev-skills.zip
